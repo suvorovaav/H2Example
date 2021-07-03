@@ -8,6 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+
 @SpringBootApplication
 @RestController
 @RequestMapping(value = "", produces = "application/json")
@@ -23,5 +25,9 @@ public class H2ExampleApplication {
     @RequestMapping("create-employee")
     public Employee createPerson(){
         return employeeRep.save(new Employee());
+    }
+    @RequestMapping("employees")
+    public ArrayList getList() {
+        return (ArrayList) employeeRep.findAll();
     }
 }
