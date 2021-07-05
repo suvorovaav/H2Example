@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 
 @SpringBootApplication
-@RequestMapping(value = "", produces = "application/json")
 public class H2ExampleApplication {
     public static void main(String[] args) {
         SpringApplication.run(H2ExampleApplication.class, args);
